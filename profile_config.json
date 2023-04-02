@@ -1,0 +1,47 @@
+{
+    "fields": {
+      "username": {
+        "label": "Username",
+        "weight": 5
+      },
+      "name": {
+        "label": "Name",
+        "weight": 10
+      },
+      "gender": {
+        "label": "Gender",
+        "weight": 5
+      },
+      "photo": {
+        "label": "Photo",
+        "weight": 25
+      },
+      "dob": {
+        "label": "DOB",
+        "weight": 15
+      },
+      "education": {
+        "label": "Education",
+        "weight": 5
+      },
+      "height": {
+        "label": "Height",
+        "weight": 15
+      },
+      "occupation": {
+        "label": "Occupation",
+        "weight": 10
+      },
+      "location": {
+        "label": "Location",
+        "weight": 5
+      },
+      "instagram": {
+        "label": "Instagram",
+        "weight": 5
+      }
+    }
+  }
+
+
+  
