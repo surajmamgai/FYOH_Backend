@@ -241,7 +241,9 @@ function generateAccessToken(username) {
 }
 
 exports.logged_in_user = async function get_logged_in_user_details(req, res) {
+    console.log(req)
     try {
+        console.log("suraj")
         var result = await db.collection('users').findOne({ username: req.user.username })
         res.send(result)
     }
