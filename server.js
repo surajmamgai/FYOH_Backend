@@ -5,7 +5,7 @@ const Cors = require("cors")
 const body_parser = require("body-parser")
 const cookie_parser = require('cookie-parser');
 server.use(Cors({
-    origin: 'https://surajmamgai.github.io/FindYourOtherHalf/',
+    origin: 'https://findyourotherhalf.onrender.com',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
