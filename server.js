@@ -8,7 +8,7 @@ server.use(Cors({
     origin: 'https://findyourotherhalf.onrender.com',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
-    exposedHeaders: ['Access-Control-Allow-Credentials'],
+    exposedHeaders: ['Access-Control-Allow-Credentials', 'Access-Control-Allow-Origin'],
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 server.use(body_parser.json())
