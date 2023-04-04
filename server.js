@@ -5,11 +5,7 @@ const Cors = require("cors")
 const body_parser = require("body-parser")
 const cookie_parser = require('cookie-parser');
 server.use(Cors({
-    origin: '*',
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-    exposedHeaders: ['Access-Control-Allow-Credentials', 'Access-Control-Allow-Origin'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
+    credentials: true
 }));
 server.use(body_parser.json())
 server.use(cookie_parser());
