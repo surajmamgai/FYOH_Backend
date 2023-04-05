@@ -241,7 +241,7 @@ exports.update_user = async function (req, res) {
 
 // generate jwt token
 function generateAccessToken(username) {
-    return jwt.sign(username, "MYKEY", { expiresIn: '16000s' });
+    return jwt.sign(username, "MYKEY");
 }
 
 exports.logged_in_user = async function get_logged_in_user_details(req, res) {
