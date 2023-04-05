@@ -6,17 +6,8 @@ const body_parser = require("body-parser")
 const cookie_parser = require('cookie-parser');
 server.use(Cors({
     origin: 'https://findyourotherhalf.onrender.com',
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-    exposedHeaders: ['Access-Control-Allow-Credentials'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
+    credentials: true
   }));
-server.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', 'https://findyourotherhalf.onrender.com');
-  res.header('Access-Control-Allow-Credentials', true);
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
-});
 server.use(body_parser.json({ limit: '10mb' }))
 server.use(cookie_parser());
 
