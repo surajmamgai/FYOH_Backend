@@ -39,11 +39,17 @@ exports.user_signup = async function (req, res) {
 // Login to the platform
 exports.user_login = async function (req, res) {
     try {
-
+        
         var result = await db.collection('users').findOne({ username: req.body.username, password: req.body.password })
         if (!result) res.status(401).send({ "message": "No user Found" })
         else {
             const token = generateAccessToken({ username: req.body.username });
+            res.cookie('token', token, {
+            expires: new Date(Date.now() + 3600000), // expires in 1 hour
+            httpOnly: true,
+            secure: true,
+            sameSite: 'none' // set the sameSite option to 'none' for cross-site requests
+          });
             res.send({ 'message': "User Found!", "token": token })
         }
 
