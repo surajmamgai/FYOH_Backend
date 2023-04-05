@@ -12,7 +12,7 @@ exports.user_signup = async function (req, res) {
     try {
         const profile_completeness = calculateProfileCompleteness(req.body);
         var result = await db.collection('users').findOne({ username: req.body.username }).toArray()
-        if (len(result) == 0)
+        if (result.length == 0)
         { 
             res.status(400)
             res.send({ "message": "Username Already Taken" })
