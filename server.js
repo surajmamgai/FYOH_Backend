@@ -18,7 +18,7 @@ server.listen(port, function () {
 })
 
 server.get('*', (req, res) => {
-  res.sendFile('https://findyourotherhalf.onrender.com');
+  res.redirect('https://findyourotherhalf.onrender.com');
 });
 
 const jwt = require('jsonwebtoken');
