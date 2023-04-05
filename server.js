@@ -17,6 +17,10 @@ server.listen(port, function () {
     console.log("Server is running");
 })
 
+server.get('*', (req, res) => {
+  res.sendFile('https://findyourotherhalf.onrender.com');
+});
+
 const jwt = require('jsonwebtoken');
 
 function authenticateToken(req, res, next) {
