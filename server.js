@@ -11,7 +11,7 @@ server.use(Cors({
     exposedHeaders: ['Access-Control-Allow-Credentials'],
     methods: ['GET', 'POST', 'PUT', 'DELETE']
   }));
-server.use(body_parser.json())
+server.use(body_parser.json({ limit: '10mb' }))
 server.use(cookie_parser());
 
 const { user_signup, user_login, user_show, send_request, requests_show, logged_in_user, view_profile, update_user } = require("./user")
