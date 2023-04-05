@@ -18,17 +18,16 @@ exports.user_signup = async function (req, res) {
             res.send({ "message": "Username Already Taken" })
         }
         else{
-        db.collection('users').insertOne({
+        await db.collection('users').insertOne({
             ...req.body,
             profile_completeness: profile_completeness,
             viewers: []
         }, function (err) {
             if (err) {
                 res.send({ 'message': JSON.stringify(err) })
-            } else {
-                res.send({ 'message': "Data Inserted Successfully!" })
             }
         });
+           res.send({ 'message': "Data Inserted Successfully!" })
         }
     } catch (e) {
         console.log(e)
